@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel server.js -d dist",
-    "start": "node dist/server.js",
+    "build": "babel server.js -d dist && mkdir public && xcopy dist public /s /e /y",
+    "start": "node public/server.js",
     "dev": "nodemon server.js --exec babel-node"
   },
   "keywords": [],
